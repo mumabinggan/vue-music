@@ -1,7 +1,10 @@
 <template>
   <transition name="slide">
     <div class="m-singer-detail">
-      <m-musiclist></m-musiclist>
+      <m-musiclist :songs="songs"
+                   :title="this.singer.name"
+                   :avatar="this.singer.avatar">
+      </m-musiclist>
     </div>
     <!--<div class="loading-container" v-if="!hasSongList">-->
       <!--<loading></loading>-->
@@ -13,12 +16,11 @@
   import {getSingerDetail} from 'src/api/singer'
   import {RESULT_OK} from '../../api/config'
   import Loading from 'base/loading/loading'
+  import MMusiclist from 'components/music-list/music-list'
   import {mapGetters} from 'vuex'
   import {createSong} from 'common/js/song'
-  import MMusiclist from 'components/music-list/music-list'
-
   export default {
-    name: 'm-singer-detail',
+    name: 'singer-detail',
     data() {
       return {
         songs: []
@@ -70,8 +72,7 @@
     position fixed
     top 0
     bottom 0
-    left 0
-    right 0
+    width 100%
     z-index 200
     background-color $color-background
   .slide-enter-active, .slide-leave-active {

@@ -39,7 +39,7 @@ module.exports = {
       'components': resolve('src/components'),
       'api': resolve('src/api'),
       'base': resolve('src/base'),
-      'image': resolve('src/common/image')
+      'image': resolve('src/common/image'),
     }
   },
   module: {

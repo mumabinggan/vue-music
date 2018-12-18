@@ -22,7 +22,7 @@
   const HOT_SINGER_LEN = 10
 
   export default {
-    name: 'm-singerlist',
+    name: 'singerlist',
     components: {
       MPhonelist,
       Loading

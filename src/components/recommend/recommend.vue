@@ -4,7 +4,7 @@
       <!--<div class="swiper-slide">-->
         <!---->
       <!--</div>-->
-      <m-slider  class="swiper-slide"
+      <m-slider class="recommend-slider swiper-slide"
         @hasImgLoadedFinish="updateLayout"
                 @clickIndex="clickCarouselIndex"
                 v-if="hasCarousel" v-bind:arr="this.carouselResponse.data.slider">
@@ -113,9 +113,12 @@
     position: fixed
     top: 88px
     bottom: 0
+    overflow hidden
     .scrollview
       width: 100%
       height: 100%
+      .recommend-slider
+        height auto
       .recommend-playlist-title
         width: 100%
         height: 60px

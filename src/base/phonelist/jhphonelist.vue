@@ -39,7 +39,6 @@
 <script type="text/ecmascript-6">
   /* eslint-disable no-unused-vars */
 
-  import Swiper from 'swiper'
   import 'swiper/dist/css/swiper.min.css'
   import MScrollview from 'base/scrollview/jhscrollview'
   import {getData} from '../../common/js/dom'
@@ -124,7 +123,7 @@
       height 100%
       width 100%
       .phonelist-item
-        height 90px
+        height auto
         .phonelist-item-content
           height 90px
           display flex
